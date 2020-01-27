@@ -5,13 +5,16 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 // Import Components
 import Routes from './routes'
+import MainLayout from './components/layouts/MainLayout'
 
 // Import Styles
 import './styles/reset.scss'
 
 ReactDOM.render(
   <Router>
-    <Routes />
+    <MainLayout>
+      <Routes />
+    </MainLayout>
   </Router>,
   document.getElementById('root')
 )
