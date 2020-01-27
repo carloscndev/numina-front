@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 import App from './components/presentacional/App/App'
 
 // Import Styles
-import './index.css'
+import './index.scss'
 
 ReactDOM.render(
   <App />,

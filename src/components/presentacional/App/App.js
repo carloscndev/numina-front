@@ -3,7 +3,7 @@ import React from 'react'
 
 // Import Styles
 import logo from '../../../assets/logo.svg'
-import './App.css'
+import './App.scss'
 
 function App () {
   return (
