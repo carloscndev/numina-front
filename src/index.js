@@ -1,14 +1,17 @@
 // Import Modules
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 // Import Components
-import App from './components/presentacional/App/App'
+import Routes from './routes'
 
 // Import Styles
 import './styles/reset.scss'
 
 ReactDOM.render(
-  <App />,
+  <Router>
+    <Routes />
+  </Router>,
   document.getElementById('root')
 )
