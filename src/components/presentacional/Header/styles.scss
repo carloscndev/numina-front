@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+header {
+  background-color: $white;
+  padding: 1rem 0;
+
+  .header-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto !important;
+    max-width: $large;
+
+    .first-section {
+      display: flex;
+    }
+
+    .second-section {
+      display: flex;
+    }
+  }
+
+}
