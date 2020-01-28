@@ -11,9 +11,9 @@ import './styles.scss'
 const Login = ({
   login,
   setEmail,
-  setNickname
+  setNickname,
+  doLogin
 }) => {
-  console.log(login)
   return (
     <div className='login-page'>
       <div className='login-container'>
@@ -34,7 +34,12 @@ const Login = ({
           setContent={(ev) => setNickname(ev.target.value)}
         />
         <div className='button-container'>
-          <Button>Entrar</Button>
+          <Button
+            clickEvent={() => doLogin()}
+            isDisabled={!login.isEmailValid && !login.isNickNameValid}
+          >
+            Entrar
+          </Button>
         </div>
       </div>
     </div>

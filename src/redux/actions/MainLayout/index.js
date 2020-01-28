@@ -20,3 +20,9 @@ export const setModalVisible = isModalVisible => {
     isModalVisible
   }
 }
+
+export const doLogin = () => {
+  return dispatch => {
+    console.log('login')
+  }
+}
