@@ -36,7 +36,7 @@ const Login = ({
         <div className='button-container'>
           <Button
             clickEvent={() => doLogin()}
-            isDisabled={!login.isEmailValid && !login.isNickNameValid}
+            // isDisabled={!login.isEmailValid && !login.isNickNameValid}
           >
             Entrar
           </Button>
