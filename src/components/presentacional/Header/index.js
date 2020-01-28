@@ -10,7 +10,7 @@ import NuminaIcon from '../../../assets/numina.svg'
 // Import Styles
 import './styles.scss'
 
-const Header = ({user}) => (
+const Header = ({ user }) => (
   <header>
     <div className='header-container'>
       <div className='first-section'>
