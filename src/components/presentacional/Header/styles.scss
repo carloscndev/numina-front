@@ -1,23 +1,66 @@
 @import '../../../styles/variables.scss';
 
 header {
-  background-color: $white;
+  background-color: $purple;
   padding: 1rem 0;
 
   .header-container {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    height: $header-height;
     margin: auto !important;
     max-width: $large;
 
     .first-section {
+      align-items: center;
       display: flex;
+      justify-content: space-between;
+      margin: auto;
+      width: 90%;
+
+      svg{
+        margin: 0.5rem 0.5rem 0;
+      }
+      span {
+        font-size: 1.3rem;
+        color: $gray-light;
+        margin-left: 0.5rem;
+      }
     }
 
     .second-section {
-      display: flex;
+      display: none;
     }
   }
+}
 
+@media (min-width: $large) {
+  header {
+    .header-container {
+      .first-section {
+        width: 50%;
+        justify-content: flex-start;
+      }
+      .second-section {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+
+        .notifications-icon {
+          margin-right: 0.5rem;
+        }
+
+        .user {
+          align-items: center;
+          display: flex;
+
+          span {
+            color: $white;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
 }

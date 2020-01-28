@@ -3,6 +3,9 @@ import React from 'react'
 
 // Import Componentes
 import HamburguerIcon from '../../icons/HamburgerIcon'
+import BellIcon from '../../icons/BellIcon'
+import UserIcon from '../../icons/UserIcon'
+import NuminaIcon from '../../../assets/numina.svg'
 
 // Import Styles
 import './styles.scss'
@@ -11,17 +14,20 @@ const Header = () => (
   <header>
     <div className='header-container'>
       <div className='first-section'>
-        <div>Logo</div>
+        <div className='numina-icon'>
+          <img src={NuminaIcon} alt='Numina' />
+        </div>
         <div>
-          <HamburguerIcon />
+          <HamburguerIcon color='#d8d8d8' width='22' height='22' />
         </div>
       </div>
       <div className='second-section'>
-        <div>
-          Notifications
+        <div className='notifications-icon'>
+          <BellIcon color='#fff' />
         </div>
-        <div>
-          User
+        <div className='user'>
+          <UserIcon color='#fff' />
+          <span>User Name</span>
         </div>
       </div>
     </div>
