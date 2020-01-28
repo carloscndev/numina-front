@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 // Import Components
 import Header from '../../presentacional/Header'
 import Footer from '../../presentacional/Footer'
+import Menu from '../../presentacional/Menu'
 
 // Import Styles
 import './styles.scss'
@@ -17,6 +18,7 @@ const MainLayout = ({
   return (
     <div className='main-layout'>
       <Header user={mainLayout.user} />
+      <Menu />
       <main>
         {children}
       </main>

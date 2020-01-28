@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+.menu {
+  background-color: $purple-strong;
+  position: absolute;
+  height: calc(100vh - 5rem);
+  width: 70%;
+  max-width: 300px;
+}
+
+.menu-background {
+  background-color: $gray-background;
+  position: absolute;
+  left: 70%;
+  height: calc(100vh - 5rem);
+  width: 30%;
+}
+
+@media(min-width: $large) {
+  .menu-background {
+    left: 300px;
+    width: calc(100% - 300px);
+  }
+}
