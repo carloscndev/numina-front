@@ -3,6 +3,7 @@ import React from 'react'
 
 // Import Components
 import Input from '../../presentacional/Input'
+import Button from '../../presentacional/Button'
 
 // Import Styles
 import './styles.scss'
@@ -26,7 +27,9 @@ const Login = ({
           label='Nombre de usuario'
           errorText='Nombre invalido'
         />
-        <button>Entrar</button>
+        <div className='button-container'>
+          <Button>Entrar</Button>
+        </div>
       </div>
     </div>
   )
