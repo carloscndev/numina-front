@@ -1,0 +1,13 @@
+@import '../../../styles/variables.scss';
+
+.menu-item {
+  align-items: center;
+  display: flex;
+  padding: 1rem;
+  border-bottom: solid 1px $purple;
+  color: $white;
+
+  span {
+    margin-left: 1rem;
+  }
+}

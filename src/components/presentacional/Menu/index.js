@@ -1,13 +1,17 @@
 // Import Modules
 import React from 'react'
 
+// Import Components
+
+import MenuItems from '../../presentacional/MenuItems'
+
 // Import Styles
 import './styles.scss'
 
-const Menu = () => (
+const Menu = ({ user }) => (
   <>
     <div className='menu'>
-      item
+      <MenuItems />
     </div>
     <div className='menu-background' />
   </>
