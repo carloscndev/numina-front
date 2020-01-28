@@ -1,2 +1,4 @@
 export const SET_EMAIL = 'SET_EMAIL'
 export const SET_NICKNAME = 'SET_NICKNAME'
+export const SET_ERROR_EMAIL = 'SET_ERROR_EMAIL'
+export const SET_ERROR_NICKNAME = 'SET_ERROR_NICKNAME'

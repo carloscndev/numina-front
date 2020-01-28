@@ -10,13 +10,14 @@ import thunk from 'redux-thunk'
 import Routes from './routes'
 import MainLayout from './components/containers/MainLayout'
 import rootReducer from './redux/reducers/rootReducer'
+import { inputsValidationMiddleware } from './redux/middlewares/inputsValidationMiddleware'
 
 // Import Styles
 import './styles/reset.scss'
 
 export const store = createStore(
   rootReducer,
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, inputsValidationMiddleware)
 )
 
 ReactDOM.render(

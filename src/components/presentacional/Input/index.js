@@ -8,6 +8,8 @@ const InputEmail = ({
   placeholder,
   label,
   errorText,
+  isError,
+  content,
   setContent
 }) => (
   <div className='input'>
@@ -16,7 +18,7 @@ const InputEmail = ({
       placeholder={placeholder}
       onChange={setContent}
     />
-    <div className='error'>{errorText}</div>
+    {(!isError && content) && <div className='error'>{errorText}</div>}
   </div>
 )
 

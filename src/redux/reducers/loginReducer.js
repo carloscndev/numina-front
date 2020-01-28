@@ -13,6 +13,10 @@ const MainLayout = (state = initialState, action) => {
       return { ...state, email: action.email }
     case ACTIONS_TYPES.SET_NICKNAME:
       return { ...state, nickname: action.nickname }
+    case ACTIONS_TYPES.SET_ERROR_EMAIL:
+      return { ...state, isEmailValid: action.error }
+    case ACTIONS_TYPES.SET_ERROR_NICKNAME:
+      return { ...state, isNickNameValid: action.error }
     default:
       return state
   }
