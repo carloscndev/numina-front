@@ -7,9 +7,9 @@ export const setEmail = email => {
   }
 }
 
-export const setNickname = Nickname => {
+export const setNickname = nickname => {
   return {
     type: ACTIONS_TYPES.SET_NICKNAME,
-    Nickname
+    nickname
   }
 }

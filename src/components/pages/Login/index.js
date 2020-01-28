@@ -11,7 +11,7 @@ import './styles.scss'
 const Login = ({
   login,
   setEmail,
-  setNickName
+  setNickname
 }) => {
   console.log(login)
   return (
@@ -21,11 +21,13 @@ const Login = ({
           placeholder='Escribe tu email'
           label='Dirección de correo electrónico'
           errorText='Dirección de correo invalida'
+          setContent={(ev) => setEmail(ev.target.value)}
         />
         <Input
           placeholder='Escribe tu Nickname'
           label='Nombre de usuario'
           errorText='Nombre invalido'
+          setContent={(ev) => setNickname(ev.target.value)}
         />
         <div className='button-container'>
           <Button>Entrar</Button>
