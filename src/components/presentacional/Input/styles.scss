@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+.input {
+  margin: 0.5rem 0;
+  width: 100%;
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    border: solid 1px $blue-light;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    width: 90%;
+    padding: 0.5rem;
+  }
+
+  .error {
+    color: $red;
+    font-size: 0.6rem;
+  }
+}
