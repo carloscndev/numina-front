@@ -17,7 +17,12 @@ const MainLayout = ({
 }) => {
   useEffect(() => console.log(mainLayout))
   return (
-    <div className='main-layout'>
+    <div className={`
+    ${'main-layout'}
+    ${mainLayout.isMenuVisible ? 'hiden' : ''}
+    ${mainLayout.isLoading ? 'hiden' : ''}
+  `}
+    >
       <Header
         user={mainLayout.user}
         isMenuVisible={mainLayout.isMenuVisible}
