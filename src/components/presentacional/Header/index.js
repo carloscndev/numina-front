@@ -10,7 +10,7 @@ import NuminaIcon from '../../../assets/numina.svg'
 // Import Styles
 import './styles.scss'
 
-const Header = () => (
+const Header = ({user}) => (
   <header>
     <div className='header-container'>
       <div className='first-section'>
@@ -25,10 +25,14 @@ const Header = () => (
         <div className='notifications-icon'>
           <BellIcon color='#fff' />
         </div>
-        <div className='user'>
-          <UserIcon color='#fff' />
-          <span>User Name</span>
-        </div>
+        {
+          user && (
+            <div className='user'>
+              <UserIcon color='#fff' />
+              <span>{user}</span>
+            </div>
+          )
+        }
       </div>
     </div>
   </header>
