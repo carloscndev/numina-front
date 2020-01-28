@@ -8,11 +8,15 @@ import UsersIcon from '../../icons/UsersIcon'
 import AlbumIcon from '../../icons/AlbumIcon'
 import LogoutIcon from '../../icons/LogoutIcon'
 
-const MenuItems = () => (
+const MenuItems = ({ user }) => (
   <>
-    <MenuItem text='user'>
-      <UserIcon color='#fff' />
-    </MenuItem>
+    {
+      user && (
+        <MenuItem text='user'>
+          <UserIcon color='#fff' />
+        </MenuItem>
+      )
+    }
     <MenuItem text='Users'>
       <UsersIcon color='#fff' />
     </MenuItem>

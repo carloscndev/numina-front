@@ -6,7 +6,8 @@ import { bindActionCreators } from 'redux'
 import MainLayout from '../../layouts/MainLayout'
 
 import {
-  setUser
+  setUser,
+  setMenuVisible
 } from '../../../redux/actions/MainLayout'
 
 export const mapStateToProps = state => {
@@ -17,7 +18,8 @@ export const mapStateToProps = state => {
 
 export const mapDispatchToProps = dispatch => ({
   ...bindActionCreators({
-    setUser
+    setUser,
+    setMenuVisible
   }, dispatch)
 })
 

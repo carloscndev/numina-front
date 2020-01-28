@@ -6,3 +6,10 @@ export const setUser = user => {
     user
   }
 }
+
+export const setMenuVisible = isMenuVisible => {
+  return {
+    type: ACTIONS_TYPES.SET_MENU_VISIBLE,
+    isMenuVisible
+  }
+}

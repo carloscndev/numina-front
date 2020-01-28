@@ -12,13 +12,21 @@ import './styles.scss'
 const MainLayout = ({
   children,
   mainLayout,
-  setUser
+  setUser,
+  setMenuVisible
 }) => {
   useEffect(() => console.log(mainLayout))
   return (
     <div className='main-layout'>
-      <Header user={mainLayout.user} />
-      <Menu />
+      <Header
+        user={mainLayout.user}
+        isMenuVisible={mainLayout.isMenuVisible}
+        setMenuVisible={setMenuVisible}
+      />
+      {
+        mainLayout.isMenuVisible &&
+          <Menu setMenuVisible={setMenuVisible} />
+      }
       <main>
         {children}
       </main>
