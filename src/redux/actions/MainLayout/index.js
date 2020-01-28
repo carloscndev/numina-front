@@ -13,3 +13,10 @@ export const setMenuVisible = isMenuVisible => {
     isMenuVisible
   }
 }
+
+export const setModalVisible = isModalVisible => {
+  return {
+    type: ACTIONS_TYPES.SET_MODAL_VISIBLE,
+    isModalVisible
+  }
+}

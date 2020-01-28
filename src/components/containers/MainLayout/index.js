@@ -7,7 +7,8 @@ import MainLayout from '../../layouts/MainLayout'
 
 import {
   setUser,
-  setMenuVisible
+  setMenuVisible,
+  setModalVisible
 } from '../../../redux/actions/MainLayout'
 
 export const mapStateToProps = state => {
@@ -19,7 +20,8 @@ export const mapStateToProps = state => {
 export const mapDispatchToProps = dispatch => ({
   ...bindActionCreators({
     setUser,
-    setMenuVisible
+    setMenuVisible,
+    setModalVisible
   }, dispatch)
 })
 
