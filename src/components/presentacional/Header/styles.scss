@@ -27,6 +27,14 @@ header {
         color: $gray-light;
         margin-left: 0.5rem;
       }
+
+      .close-icon {
+        cursor: pointer;
+      }
+
+      .hamburger-icon{
+        cursor: pointer;
+      }
     }
 
     .second-section {

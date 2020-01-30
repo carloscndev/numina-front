@@ -7,7 +7,7 @@ export const initialState = {
   isNickNameValid: false
 }
 
-const MainLayout = (state = initialState, action) => {
+const Login = (state = initialState, action) => {
   switch (action.type) {
     case ACTIONS_TYPES.SET_EMAIL:
       return { ...state, email: action.email }
@@ -22,4 +22,4 @@ const MainLayout = (state = initialState, action) => {
   }
 }
 
-export default MainLayout
+export default Login

@@ -16,7 +16,6 @@ const MainLayout = (state = initialState, action) => {
     case ACTIONS_TYPES.SET_MODAL_VISIBLE:
       return { ...state, isModalVisible: action.isModalVisible }
     case ACTIONS_TYPES.SET_LOADING:
-      console.log('here')
       return { ...state, isLoading: action.isLoading }
     default:
       return state
