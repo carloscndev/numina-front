@@ -8,10 +8,10 @@ import MenuItems from '../../presentacional/MenuItems'
 // Import Styles
 import './styles.scss'
 
-const Menu = ({ user, setMenuVisible }) => (
+const Menu = ({ user, setMenuVisible, doLogout }) => (
   <>
     <div className='menu'>
-      <MenuItems user={user} />
+      <MenuItems user={user} doLogout={doLogout} />
     </div>
     <div
       className='menu-background'

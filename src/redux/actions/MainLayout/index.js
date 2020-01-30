@@ -43,3 +43,11 @@ export const doLogin = (email, nickname) => {
     }
   }
 }
+
+export const doLogout = () => {
+  return dispatch => {
+    dispatch(setUser(''))
+    window.sessionStorage.setItem('user', '')
+    window.location.href = '/'
+  }
+}

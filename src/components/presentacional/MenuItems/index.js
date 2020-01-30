@@ -8,7 +8,7 @@ import UsersIcon from '../../icons/UsersIcon'
 import AlbumIcon from '../../icons/AlbumIcon'
 import LogoutIcon from '../../icons/LogoutIcon'
 
-const MenuItems = ({ user }) => (
+const MenuItems = ({ user, doLogout }) => (
   <>
     {
       user && (
@@ -20,10 +20,15 @@ const MenuItems = ({ user }) => (
     <MenuItem text='Users'>
       <UsersIcon color='#fff' />
     </MenuItem>
-    <MenuItem text='Albums'>
-      <AlbumIcon color='#fff' />
-    </MenuItem>
-    <MenuItem text='Logout'>
+    <a href='/gallery'>
+      <MenuItem text='Albums'>
+        <AlbumIcon color='#fff' />
+      </MenuItem>
+    </a>
+    <MenuItem
+      text='Logout'
+      clickEvent={() => { doLogout() }}
+    >
       <LogoutIcon color='#fff' />
     </MenuItem>
   </>

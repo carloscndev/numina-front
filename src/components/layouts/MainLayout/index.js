@@ -15,7 +15,8 @@ const MainLayout = ({
   children,
   mainLayout,
   setMenuVisible,
-  setModalVisble
+  setModalVisble,
+  doLogout
 }) => {
   useEffect(() => console.log(mainLayout))
   return (
@@ -33,7 +34,10 @@ const MainLayout = ({
       />
       {
         mainLayout.isMenuVisible &&
-          <Menu setMenuVisible={setMenuVisible} />
+          <Menu
+            setMenuVisible={setMenuVisible}
+            doLogout={doLogout}
+          />
       }
       {
         mainLayout.isModalVisible &&

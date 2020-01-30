@@ -4,8 +4,8 @@ import React from 'react'
 // Import Styles
 import './styles.scss'
 
-const MenuItem = ({ children, text }) => (
-  <div className='menu-item'>
+const MenuItem = ({ children, text, clickEvent }) => (
+  <div className='menu-item' onClick={clickEvent}>
     {children}
     <span>{text}</span>
   </div>
