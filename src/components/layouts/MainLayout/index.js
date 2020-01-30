@@ -14,7 +14,6 @@ import './styles.scss'
 const MainLayout = ({
   children,
   mainLayout,
-  setUser,
   setMenuVisible,
   setModalVisble
 }) => {
