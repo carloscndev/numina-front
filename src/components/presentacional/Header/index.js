@@ -16,7 +16,9 @@ const Header = ({ user, isMenuVisible, setMenuVisible }) => (
     <div className='header-container'>
       <div className='first-section'>
         <div className='numina-icon'>
-          <img src={NuminaIcon} alt='Numina' />
+          <a href='/'>
+            <img src={NuminaIcon} alt='Numina' />
+          </a>
         </div>
         {
           isMenuVisible && (

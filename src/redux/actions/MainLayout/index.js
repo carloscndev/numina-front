@@ -30,6 +30,7 @@ export const doLogin = () => {
       .then(response => response.json())
       .then(data => {
         //dispatch(setLoading(false))
+        console.log('aqui')
         console.log(data)
       })
       .catch(err => console.log(err))
