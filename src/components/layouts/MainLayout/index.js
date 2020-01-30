@@ -1,5 +1,5 @@
 // Import Modules
-import React, { useEffect } from 'react'
+import React from 'react'
 
 // Import Components
 import Header from '../../presentacional/Header'
@@ -18,7 +18,6 @@ const MainLayout = ({
   setModalVisble,
   doLogout
 }) => {
-  useEffect(() => console.log(mainLayout))
   return (
     <div className={`
     ${'main-layout'}

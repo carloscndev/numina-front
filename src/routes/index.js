@@ -3,7 +3,7 @@ import React, { lazy, Suspense, useState, useEffect } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 // Import Components
-const Home = lazy(() => import('../components/pages/Home'))
+const Home = lazy(() => import('../components/containers/HomeContainer'))
 const Gallery = lazy(() => import('../components/pages/Gallery'))
 const Login = lazy(() => import('../components/containers/LoginConatiner'))
 const NotFound = lazy(() => import('../components/pages/NotFound'))
@@ -11,7 +11,6 @@ const NotFound = lazy(() => import('../components/pages/NotFound'))
 const Routes = () => {
   const [isLoggedIn, setState] = useState()
   useEffect(() => {
-    console.log('login   ' + isLoggedIn)
     setState(window.sessionStorage.getItem('user') || '')
   }, [setState, isLoggedIn])
   return (

@@ -17,9 +17,11 @@ const MenuItems = ({ user, doLogout }) => (
         </MenuItem>
       )
     }
-    <MenuItem text='Users'>
-      <UsersIcon color='#fff' />
-    </MenuItem>
+    <a href='/'>
+      <MenuItem text='Users'>
+        <UsersIcon color='#fff' />
+      </MenuItem>
+    </a>
     <a href='/gallery'>
       <MenuItem text='Albums'>
         <AlbumIcon color='#fff' />
