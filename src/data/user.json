@@ -1,6 +1,4 @@
 {
-  user: {
-    email: 'admin@gmail.com',
-    user: 'admin'
-  }
+  "email": "admin@gmail.com",
+  "user": "admin"
 }
