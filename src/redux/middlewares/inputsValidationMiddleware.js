@@ -19,7 +19,7 @@ export const inputsValidationMiddleware = store => next => action => {
       next(setErrorNickname(validateNickname(action.nickname)))
       break
     default:
-      return store
+      return next(action)
   }
   return next(action)
 }

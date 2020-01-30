@@ -10,16 +10,20 @@ import {
   setNickname
 } from '../../../redux/actions/Login'
 
+import { doLogin } from '../../../redux/actions/MainLayout'
+
 export const mapStateToProps = state => {
   return {
-    login: state.Login
+    login: state.Login,
+    user: state.MainLayout.user
   }
 }
 
 export const mapDispatchToProps = dispatch => ({
   ...bindActionCreators({
     setEmail,
-    setNickname
+    setNickname,
+    doLogin
   }, dispatch)
 })
 

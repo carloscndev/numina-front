@@ -1,14 +1,13 @@
 import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 
 export const initialState = {
-  user: '',
+  user: window.sessionStorage.getItem('user') || '',
   isMenuVisible: false,
   isModalVisible: false,
   isLoading: false
 }
 
 const MainLayout = (state = initialState, action) => {
-  console.log(action)
   switch (action.type) {
     case ACTIONS_TYPES.SET_USER:
       return { ...state, user: action.user }

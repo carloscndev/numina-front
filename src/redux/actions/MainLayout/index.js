@@ -30,13 +30,16 @@ export const setLoading = isLoading => {
   }
 }
 
-export const doLogin = () => {
+export const doLogin = (email, nickname) => {
   return dispatch => {
-    return setTimeout(() => {
-      console.log(USER)
-      dispatch(setModalVisible(true))
+    if (email === USER.email && nickname === USER.nickname) {
       dispatch(setLoading(true))
-      dispatch(setMenuVisible(true))
-    }, 2000)
+      return setTimeout(() => {
+        dispatch(setUser(nickname))
+        dispatch(setLoading(false))
+        window.sessionStorage.setItem('user', nickname)
+        window.location.href = '/'
+      }, 2000)
+    }
   }
 }

@@ -1,5 +1,5 @@
 // Import Modules
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Import Components
 import Input from '../../presentacional/Input'
@@ -10,10 +10,16 @@ import './styles.scss'
 
 const Login = ({
   login,
+  user,
   setEmail,
   setNickname,
   doLogin
 }) => {
+  useEffect(() => {
+    if (user) {
+      window.location.href = '/'
+    }
+  }, [user])
   return (
     <div className='login-page'>
       <div className='login-container'>
@@ -33,10 +39,14 @@ const Login = ({
           content={login.nickname}
           setContent={(ev) => setNickname(ev.target.value)}
         />
-        <div className='button-container'>
+        <div className={`
+        ${'button-container'}
+        ${!login.isEmailValid && !login.isNickNameValid ? 'disabled' : null}
+        `}
+        >
           <Button
-            clickEvent={() => doLogin()}
-            // isDisabled={!login.isEmailValid && !login.isNickNameValid}
+            clickEvent={() => doLogin(login.email, login.nickname)}
+            isDisabled={!login.isEmailValid && !login.isNickNameValid}
           >
             Entrar
           </Button>
