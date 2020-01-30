@@ -36,6 +36,7 @@ export const doLogin = () => {
       console.log(USER)
       dispatch(setModalVisible(true))
       dispatch(setLoading(true))
+      dispatch(setMenuVisible(true))
     }, 2000)
   }
 }
