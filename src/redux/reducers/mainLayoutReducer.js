@@ -3,7 +3,8 @@ import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 export const initialState = {
   user: '',
   isMenuVisible: false,
-  isModalVisible: false
+  isModalVisible: false,
+  isLoading: false
 }
 
 const MainLayout = (state = initialState, action) => {
@@ -14,6 +15,9 @@ const MainLayout = (state = initialState, action) => {
       return { ...state, isMenuVisible: action.isMenuVisible }
     case ACTIONS_TYPES.SET_MODAL_VISIBLE:
       return { ...state, isModalVisible: action.isModalVisible }
+    case ACTIONS_TYPES.SET_LOADING:
+      console.log('here')
+      return { ...state, isLoading: action.isLoading }
     default:
       return state
   }

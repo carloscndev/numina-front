@@ -6,6 +6,7 @@ import Header from '../../presentacional/Header'
 import Footer from '../../presentacional/Footer'
 import Menu from '../../presentacional/Menu'
 import Modal from '../../presentacional/Modal'
+import LoadingSpinner from '../../presentacional/LoadingSpinner'
 
 // Import Styles
 import './styles.scss'
@@ -38,6 +39,10 @@ const MainLayout = ({
       {
         mainLayout.isModalVisible &&
           <Modal />
+      }
+      {
+        mainLayout.isLoading &&
+          <LoadingSpinner />
       }
       <main>
         {children}

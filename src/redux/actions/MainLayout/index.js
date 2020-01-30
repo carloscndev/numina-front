@@ -1,6 +1,6 @@
-import fetch from 'isomorphic-fetch'
 
 import * as ACTIONS_TYPES from './actionsTypes'
+import { USER } from '../../../constants/user'
 
 export const setUser = user => {
   return {
@@ -23,16 +23,19 @@ export const setModalVisible = isModalVisible => {
   }
 }
 
+export const setLoading = isLoading => {
+  return {
+    type: ACTIONS_TYPES.SET_LOADING,
+    isLoading
+  }
+}
+
 export const doLogin = () => {
   return dispatch => {
-    const url = '../../data/user.json'
-    return fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        //dispatch(setLoading(false))
-        console.log('aqui')
-        console.log(data)
-      })
-      .catch(err => console.log(err))
+    return setTimeout(() => {
+      console.log(USER)
+      dispatch(setModalVisible(true))
+      dispatch(setLoading(true))
+    }, 2000)
   }
 }
